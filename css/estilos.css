@@ -1,0 +1,505 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  padding: 50px 20px;
+  background-image: url("../img/img-hero.jpg");
+  background-size: cover;
+  background-position: right center;
+  display: flex;
+  align-items: center;
+}
+
+/* 2. CAJA INTERNA (Limita el ancho del texto) */
+.hero-contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* 3. TEXTOS */
+.volanta {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  /* Separa las letras */
+  color: #3a6b4c;
+  /* Verde institucional */
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.15;
+  /* Junta un poco las dos líneas del título */
+  color: #0b2239;
+  /* Azul marino muy oscuro */
+  margin-bottom: 12px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 14px;
+}
+
+.descripcion {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #334155;
+  max-width: 560px;
+  /* Obliga al párrafo a cortarse antes de pisar los limones */
+  margin-bottom: 28px;
+}
+
+/* 4. FILA DE PÍLDORAS (BADGES) */
+.lista-badges {
+  display: flex;
+  /* Pone los 5 elementos uno al lado del otro */
+  flex-wrap: wrap;
+  /* Si no entran en pantallas chicas, bajan solos */
+  gap: 12px;
+  /* Espacio entre cada píldora */
+}
+
+.pildora {
+  display: flex;
+  align-items: center;
+  /* Alinea el circulito y el texto al medio */
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.88);
+  /* Blanco semitransparente */
+  padding: 6px 16px 6px 8px;
+  /* Más aire a la derecha que a la izquierda */
+  border-radius: 50px;
+  /* Bordes totalmente redondos */
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1e293b;
+  box-shadow: 0 1px 3px rgb(108, 150, 56);
+}
+
+/* El circulito verde adentro de cada píldora */
+/*.icono-circulo {
+  width: 28px;
+  height: 28px;
+  background-color: rgb(206, 206, 206);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}*/
+
+.icono-circulo {
+  width: 28px;
+  height: 28px;
+  background-color: rgb(206, 206, 206);
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.icono-circulo img {
+  width: 15px;
+  height: 15px;
+}
+
+/* 5. FRASE FLOTANTE DE LA DERECHA */
+.frase-derecha {
+  position: absolute;
+  /* La saca del flujo normal para pegarla a la esquina */
+  bottom: 28px;
+  right: 40px;
+  max-width: 250px;
+  text-align: right;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  color: #ffffff;
+  /* Sombra detrás de las letras blancas para que se lean bien sobre las hojas */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
+  border-bottom: 3px solid #65a37e;
+  /* La rayita verde debajo de la frase */
+  padding-bottom: 8px;
+}
+
+/* 6. ADAPTABILIDAD PARA CELULARES (Responsive) */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 30px;
+  }
+
+  /* En celulares ocultamos la frase flotante o la pasamos abajo para que no tape los botones */
+  .frase-derecha {
+    position: static;
+    margin-top: 30px;
+    text-align: left;
+    color: #1e293b;
+    text-shadow: none;
+  }
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.resumen {
+  max-width: 1450px;
+  margin: 5px auto;
+  padding: 20px;
+  background-color: #fef3c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #16a34a;
+  padding: 28px 32px
+}
+
+/*.color-icono{
+  background-color: rgb(243, 194, 53);
+  padding: 10px;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}*/
+
+.color-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.icono-cap1 {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.icono-cap2 {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.icono-cap5 {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.icono-cap6 {
+  background-color: #ffedd5;
+  color: #c2410c;
+}
+
+.icono-cap7 {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+.tarjeta-hover {
+  transition: transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.tarjeta-hover:hover {
+  transform: translateY(-5px);
+  border: 1px solid #16a34a !important;
+  box-shadow: 0 10px 20px rgba(243, 194, 53) !important;
+}
+
+/*.tarjeta-hover:hover {
+  transform: translateY(-4px);
+  border-color: #16a34a !important;
+}*/
+
+.pastillas-hover {
+  transition: all 0.25s ease;
+  /*cursor: pointer;*/
+}
+
+.pastillas-hover:hover {
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(108, 150, 56);
+  box-shadow: 0 4px 12px rgba(52, 69, 137);
+}
+
+.contenedor-ruta {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 14px;
+  padding: 20px 24px;
+}
+
+
+.ruta-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  border: 2px solid #bbf7d0;
+  border-radius: 16px;
+  padding: 18px 24px;
+  background-color: #fef3c7;
+}
+
+.ruta-titulo {
+  font-weight: 700;
+  color: #15803d;
+  line-height: 1.25;
+}
+
+.ruta-pasos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f0f5ef;
+  padding: 8px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+  border: 1px solid rgb(108, 150, 56);
+}
+
+.circulo-verde {
+  background-color: #4f8a4b !important;
+  color: #ffffff !important;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+
+}
+
+.ruta-flecha {
+  width: 45px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+
+@media (max-width: 768px) {
+  .ruta-flecha {
+    display: none;
+  }
+
+  .paso-caja {
+    width: 100%;
+  }
+}
+
+.color-secciones {
+  background-color: #fef3c7;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.footer-afinoa {
+  background-color: #143d29;
+  /* Verde bosque oscuro institucional */
+  color: #ffffff;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ruta-pasos a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.ruta-pasos a:hover {
+  color: #15803d;
+  text-decoration: underline;
+}
+
+.contenedor-documentos {
+  border: 2px solid #bbf7d0;
+  border-radius: 16px;
+  padding: 18px 24px;
+  background-color: #fef3c7;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.grilla-documentos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  flex: 1 1 100%;
+}
+
+.nav-rc .btn-success {
+  color: white;
+}
+
+.nav-rc .btn-success:hover {
+  color: #ffffff;
+  background-color: rgb(108, 150, 56);
+  border-color: rgb(52, 69, 137);
+}
+
+@media (min-width: 992px) {
+  .site-header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .site-header .rc-offcanvas {
+    flex-grow: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  .site-header .offcanvas-body {
+    flex-grow: 0 !important;
+    justify-content: flex-end !important;
+  }
+
+  .site-header .navbar-nav {
+    margin-left: auto !important;
+  }
+}
+
+.card-body a.badge {
+  font-size: 1em;
+  color: #198754;
+}
+
+.card-body a.badge:hover {
+  color: #146c43;
+}
+
+/*responsive documentos y formularios*/
+.grilla-documentos>* {
+  min-width: 0;
+}
+
+.grilla-documentos .ruta-pasos {
+  width: 100%;
+  height: 100%;
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+
+.grilla-documentos .ruta-pasos img {
+  flex-shrink: 0;
+}
+
+.grilla-documentos .ruta-pasos a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 992px) {
+  .grilla-documentos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .contenedor-documentos {
+    padding: 14px 12px;
+  }
+
+  .grilla-documentos {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .grilla-documentos .ruta-pasos {
+    padding: 10px 12px;
+  }
+}
+
+/*para logo*/
+@media (max-width: 576px) {
+  .site-header .navbar-brand img {
+    height: 50px !important;
+  }
+}
+
+/* Misma altura en desktop entre "Documentos y Formularios" y la grilla */
+@media (min-width: 992px) {
+  #formularios.ruta-horizontal {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  #formularios .ruta-titulo {
+    flex-shrink: 0;
+  }
+
+  #formularios .grilla-documentos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  #formularios .grilla-documentos>* {
+    min-width: 0;
+  }
+
+  #formularios .grilla-documentos .ruta-pasos {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Letras blancas en el hero para mobile */
+@media (max-width: 768px) {
+
+  .hero .volanta,
+  .hero .titulo,
+  .hero .subtitulo,
+  .hero .descripcion {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
+  }
+}
