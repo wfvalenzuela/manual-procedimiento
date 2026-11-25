@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     boton.addEventListener("click", (e) => {
       e.preventDefault();
       alert(
-        "Contacto: Cdr. Marcelo Giñez\n" +
+        "CONTACTO\n" +
+        "Cdr. Marcelo Giñez\n" +
         "Área: Administración\n" +
         "Correo: mginez@afinoa.org.ar\n" +
         "Teléfono: +54 381 604 7659"
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boton.addEventListener("click", (e) => {
       e.preventDefault();
       alert(
-        "Formularios y Documentos:\n" +
+        "FORMULARIOS Y DOCUMENTOS\n" +
         "Puedes descargarlos directamente desde la sección DOCUMENTOS Y FORMULARIOS en la página."
       );
     });
