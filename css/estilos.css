@@ -139,8 +139,6 @@
   color: #ffffff;
   /* Sombra detrás de las letras blancas para que se lean bien sobre las hojas */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
-  border-bottom: 3px solid #65a37e;
-  /* La rayita verde debajo de la frase */
   padding-bottom: 8px;
 }
 
@@ -152,11 +150,7 @@
 
   /* En celulares ocultamos la frase flotante o la pasamos abajo para que no tape los botones */
   .frase-derecha {
-    position: static;
-    margin-top: 30px;
-    text-align: left;
-    color: #1e293b;
-    text-shadow: none;
+    display: none;
   }
 }
 
