@@ -326,6 +326,7 @@
   margin-right: 5px;
   border-radius: 8px;
   margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .footer-links a {
