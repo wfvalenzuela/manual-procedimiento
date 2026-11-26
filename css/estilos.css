@@ -28,6 +28,19 @@
   z-index: 2;
 }
 
+.borde-nav {
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-inline: 16px;
+  overflow: hidden;
+}
+
+.borde-nav .navbar-brand img {
+  mix-blend-mode: multiply;
+}
+
 /* 3. TEXTOS */
 .volanta {
   display: block;
@@ -155,7 +168,7 @@
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: rgb(251, 245, 245);
   border-bottom: 1px solid #e2e8f0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
@@ -389,6 +402,9 @@
     flex-grow: 1 !important;
     display: flex !important;
     justify-content: flex-end !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
 
   .site-header .offcanvas-body {
