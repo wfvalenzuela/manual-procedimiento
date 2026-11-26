@@ -7,7 +7,6 @@
 
 .hero {
   position: relative;
-  width: 100%;
   min-height: 380px;
   padding: 50px 20px;
   background-image: url("../img/img-hero.jpg");
@@ -15,6 +14,10 @@
   background-position: right center;
   display: flex;
   align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
 }
 
 /* 2. CAJA INTERNA (Limita el ancho del texto) */
@@ -164,14 +167,12 @@
 }
 
 .resumen {
-  max-width: 1450px;
-  margin: 5px auto;
-  padding: 20px;
+  margin: 10px 10px;
+  padding: 28px 32px;
   background-color: #fef3c7;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   border-left: 5px solid #16a34a;
-  padding: 28px 32px
 }
 
 /*.color-icono{
@@ -302,7 +303,6 @@
   flex-shrink: 0;
 }
 
-
 @media (max-width: 768px) {
   .ruta-flecha {
     display: none;
@@ -322,6 +322,10 @@
 .footer-afinoa {
   background-color: #143d29;
   color: #ffffff;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .footer-links a {
