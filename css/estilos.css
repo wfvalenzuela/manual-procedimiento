@@ -181,7 +181,9 @@
 }
 
 .navbar {
-  background-color: #fbf6e3;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgb(191, 202, 244);
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(25, 25, 25, 0.04);
